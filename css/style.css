@@ -1,0 +1,279 @@
+
+
+/*font face pre selectionnée mais pas choisie
+@font-face {
+    font-family: "ralewayMedium";
+    src: url("fontsRaleway/Raleway-Medium.ttf");
+}*/
+
+/* =========   FONT-FACE CHOISIES   =========*/
+@font-face {
+    font-family: "ralewayBold"; /*Card/Title et Title/Section*/
+    src: url("fontsRaleway/Raleway-Bold.ttf");
+}
+
+@font-face {
+    font-family: "ralewayRegular"; /* Information*/
+    src: url("fontsRaleway/Raleway-Regular.ttf");
+}
+
+
+
+#cadreGlobal{
+    width : 1400px;                 /*exigence note de synthèse largeur max*/
+    padding :0 30px 30px 30px;     /*Coller la page en haut mai maisse un bord sur les côtés*/ 
+    margin : auto;                  /* Pour que la page reste au centre en cas de réduction de la fenetre*/
+}
+
+h1, h2{
+    font-family: "ralewayBold";
+    font-size: 1.4em;
+}
+
+p{
+    font-family : "ralewayRegular";
+    font-size : 1em;
+}
+
+
+
+
+/* < =========   ZONE A SUPPRIMER UNE FOIS LA MAQUETTE VALIDEE ========= */
+#cadreGlobal{    
+    border : 4px solid black;         
+}
+
+
+div{
+    border:2px solid red;
+}
+
+section{
+    border:2px solid rgb(249, 241, 4);
+}
+
+
+h1, h2{
+    border : 2px solid blue;
+}
+
+header, main{
+    border: 2px solid gray;
+}
+
+nav{
+    border: 2px solid pink;    
+}
+
+p{
+    border:2px solid rgb(37, 206, 48);
+}
+
+
+
+
+ /*=========   FIN ZONE A SUPPRIMER QUAND MAQUETTE OK =========> */
+
+/* ========= HEADER =========*/
+header{
+    display : flex;
+    flex-direction : row;
+    justify-content:space-between;
+}
+
+#logoBooki{
+    width : 61px;           /*Conformité avec figma*/
+}
+
+#navHeader{
+    display : flex;
+    flex-direction : row;
+    justify-content: space-between;
+}
+
+#navHeader p {
+    display :flex;
+    align-items: center;
+    justify-content: center;
+    width : 162px;
+    margin-top:0px;
+    margin-bottom : 0px;
+}
+
+#navHeader p:hover {
+    border-top :2px solid #0065fc;
+    color : blue;
+  }
+
+.navPSurvol{
+    color : black;
+    text-decoration : none;
+}
+
+.navPSurvol:hover{
+    color : #0065fc;
+    text-decoration : underline;    
+}
+
+
+/*========= SECTION TITRE PRINCIPALE =========*/
+#sectionTitrePrincipal{
+    margin-top : 30px;
+}
+
+
+
+/* ========= SECTION RECHERCHE ========*/
+
+#sectionRecherche{
+    display : flex;
+    flex-direction: row;
+    padding:0px;
+    margin-top : 30px;
+    
+}
+
+#pLogoMaps{
+    display :flex;
+    align-items: center;
+    justify-content: center;
+    width : 50px;
+    height : 50px;
+    border-radius :20px 0 0 20px;
+    background-color: rgba(217,217,217, 0.6);
+}
+
+.fa-location-dot{
+    font-size : 1.2em;
+}
+
+#formulaireRecherche, .pFormulaireRecherche {
+    display : flex;
+    flex-direction: row;
+    align-content : center;
+}
+#saisieRecherche{
+        
+    font-family: "ralewayBold";
+    font-size: 1.125em; 
+   /* border :1px solid rgba(217,217,217, 0.6); */
+   border-top : 1px solid rgba(217,217,217, 0.6);
+   border-right : 0;
+   border-bottom : 1px solid rgba(217,217,217, 0.6);
+   border-left : 1px solid rgba(217,217,217, 0.6);
+}
+
+::placeholder{          /*pour mettre la zone de saisie opaque et noire*/
+    opacity : 1;
+    color:black; 
+}
+input{
+    border:none;                     
+}
+
+#boutonSubmit{
+    background-color : #0065FC;
+    color : white;
+    font-family: "ralewayBold";
+    font-size: 1.125em;
+    border-radius : 0 20px 20px 0;
+    width : 132px;            /* pour respecter la proportionnalité du figma*/
+}
+
+/* ========= PARTIE FILTRE=========*/
+
+#sectionFiltre{
+    display : flex;
+    flex-direction : row;
+    justify-content : space-around;
+    /*padding : 10px;*/
+    width :1100px;
+    
+}
+
+.iconefiltre{
+    display : flex;
+    flex-direction : row;
+    justify-content : space-around;
+    border :2px solid rgba(217,217,217);
+    border-radius : 50px;
+    /*margin-left : 50px;*/
+   
+}
+
+.iconefiltre p{
+    display :flex;
+    align-items :center;
+    /*margin-left:8px;*/
+    /*vertical-align: middle;*/
+}
+
+.pIconeFiltre{
+    font-family: "ralewayBold";
+    font-size: 1.2em;
+    /*margin:3px;*/
+    padding-left : 20px;
+    padding-right : 20px;
+   
+}
+
+/*========= LOGO INFO =========*/
+
+#logoInfo{
+    border : 2px solid gray;
+    border-radius: 50px;
+}
+
+
+
+
+/* < ========= GESTION DE LA COULEUR DES ICONES ========= */
+#etoiles{
+    color : blue;
+}
+
+.iconeBleue{
+    color: #0065FC;
+    font-size : 1.5em;             /*Pour modifier la taille des icones*/
+}
+
+.fa-info{
+    color: #0065FC;
+}
+.iconeGrise{
+    color : rgb(217, 217, 217, 0.4);
+}
+
+
+
+
+
+
+/* zone a effacer ulterieurement
+#text3{
+    font-family: "ralewayBold";
+    font-style: normal;
+    
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+
+}
+
+#text2{
+    
+    font-family: "ralewayBold";
+    font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 26px;
+}
+
+#text{
+    font-family:"ralewayRegular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+*/
