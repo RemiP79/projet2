@@ -536,7 +536,7 @@ footer {
 */
 
 
-@media all and (max-width: 992px) {              /* and (min-width: 769px) */
+@media all and (max-width: 992px) {              
     
     header {
         width : 100%;        
