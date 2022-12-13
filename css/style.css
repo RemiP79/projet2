@@ -1,279 +1,1205 @@
-
-
-/*font face pre selectionnée mais pas choisie
-@font-face {
-    font-family: "ralewayMedium";
-    src: url("fontsRaleway/Raleway-Medium.ttf");
-}*/
-
-/* =========   FONT-FACE CHOISIES   =========*/
+/* =========   POLICE GOOGLE FONT RALEWAY / / FONT-FACE CHOISIES   =========*/
 @font-face {
     font-family: "ralewayBold"; /*Card/Title et Title/Section*/
     src: url("fontsRaleway/Raleway-Bold.ttf");
 }
 
 @font-face {
-    font-family: "ralewayRegular"; /* Information*/
+    font-family: "ralewayRegular";    /* Information*/
     src: url("fontsRaleway/Raleway-Regular.ttf");
 }
 
 
+/* VERSION DESKTOP FIRST */
 
-#cadreGlobal{
-    width : 1400px;                 /*exigence note de synthèse largeur max*/
-    padding :0 30px 30px 30px;     /*Coller la page en haut mai maisse un bord sur les côtés*/ 
-    margin : auto;                  /* Pour que la page reste au centre en cas de réduction de la fenetre*/
+
+
+/* ========= DONNEES GENERALES ========= */
+
+body {
+    margin : auto;
+    max-width : 1400px;     /* LARGEUR MAX DE 1400px  */
+    padding : 30px;
 }
 
-h1, h2{
+h1, h2 {
     font-family: "ralewayBold";
-    font-size: 1.4em;
+    font-size: 140%;    
 }
 
-p{
+p {
     font-family : "ralewayRegular";
     font-size : 1em;
 }
 
-
-
-
-/* < =========   ZONE A SUPPRIMER UNE FOIS LA MAQUETTE VALIDEE ========= */
-#cadreGlobal{    
-    border : 4px solid black;         
+h3 {
+    font-family: "ralewayBold";
+    font-size : 100%; 
+    margin:0;
+    padding:0;
+    word-wrap:break-word;
 }
 
-
-div{
-    border:2px solid red;
+a {
+    color : black;                  /* Mettre le texte <a> par defaut en noir (car sinon bleu) */
+    text-decoration: none;
 }
 
-section{
-    border:2px solid rgb(249, 241, 4);
+/* < ========= GESTION DE LA COULEUR DES ICONES ========= */
+.etoiles{
+    color : #0065FC;
+}
+.iconeGrise{
+    color : rgb(217, 217, 217, 0.4);   
 }
 
-
-h1, h2{
-    border : 2px solid blue;
-}
-
-header, main{
-    border: 2px solid gray;
-}
-
-nav{
-    border: 2px solid pink;    
-}
-
-p{
-    border:2px solid rgb(37, 206, 48);
-}
-
-
-
-
- /*=========   FIN ZONE A SUPPRIMER QUAND MAQUETTE OK =========> */
 
 /* ========= HEADER =========*/
-header{
-    display : flex;
+header {
+    display : flex;         /* Recommandation d'utiliser flexbox (utilisé sur une grande partie du CSS*/
     flex-direction : row;
     justify-content:space-between;
 }
 
-#logoBooki{
-    width : 61px;           /*Conformité avec figma*/
+#logo {
+    align-items: center;
+    display:flex;    
 }
 
-#navHeader{
+#logoBooki {
+    width : 33%;           /*Conformité avec figma*/
+}
+
+#navHeader {
     display : flex;
     flex-direction : row;
     justify-content: space-between;
+    width : 20%;
 }
 
 #navHeader p {
-    display :flex;
     align-items: center;
+    display :flex;
+    height : 100px;
     justify-content: center;
-    width : 162px;
-    margin-top:0px;
-    margin-bottom : 0px;
+    margin-bottom : 0px;    
+    margin-top:0px;    
+    width : 60%;
 }
 
-#navHeader p:hover {
-    border-top :2px solid #0065fc;
-    color : blue;
-  }
-
-.navPSurvol{
-    color : black;
-    text-decoration : none;
+#navHeader p:hover {                           /* Barre bleue qui apparait */
+    border-top :2px solid #0065fc;          /*au survol pour qu'elle apparaisse en haut de la page */
+    color : #0065fc;                      
+}
+.navPSurvol {
+    text-align : center;
 }
 
-.navPSurvol:hover{
+.navPSurvol:hover {
     color : #0065fc;
-    text-decoration : underline;    
 }
 
 
 /*========= SECTION TITRE PRINCIPALE =========*/
-#sectionTitrePrincipal{
-    margin-top : 30px;
+
+#sectionTitrePrincipal {
+    margin-top : 30px;    
 }
 
+#sectionTitrePrincipal p {
+    margin-bottom : 8px;
+}
 
 
 /* ========= SECTION RECHERCHE ========*/
+#boutonSubmitIcone {
+    display : none;
+}
 
-#sectionRecherche{
+#sectionRecherche {   
     display : flex;
     flex-direction: row;
-    padding:0px;
-    margin-top : 30px;
-    
+    justify-content : left; 
+    margin-top : 20px;   
 }
 
 #pLogoMaps{
-    display :flex;
     align-items: center;
-    justify-content: center;
-    width : 50px;
+    background-color: rgba(217,217,217, 0.5); /* PB : Couleur différente entre la maquette figma #D9D9D9*/ 
+    border-radius :15px 0 0 15px;               /* et specifications techniques de la note de synthese #F2F2F2*/
+    display :flex;
     height : 50px;
-    border-radius :20px 0 0 20px;
-    background-color: rgba(217,217,217, 0.6);
+    justify-content: center;
+    width : 4%; 
 }
 
-.fa-location-dot{
+.fa-location-dot {
     font-size : 1.2em;
 }
 
 #formulaireRecherche, .pFormulaireRecherche {
+    align-content : center;
     display : flex;
     flex-direction: row;
-    align-content : center;
-}
-#saisieRecherche{
-        
-    font-family: "ralewayBold";
-    font-size: 1.125em; 
-   /* border :1px solid rgba(217,217,217, 0.6); */
-   border-top : 1px solid rgba(217,217,217, 0.6);
-   border-right : 0;
-   border-bottom : 1px solid rgba(217,217,217, 0.6);
-   border-left : 1px solid rgba(217,217,217, 0.6);
+    height : 50px;
 }
 
-::placeholder{          /*pour mettre la zone de saisie opaque et noire*/
-    opacity : 1;
-    color:black; 
+#saisieRecherche { 
+    border-bottom : 1px solid rgba(217,217,217, 0.5);
+    border-left : 1px solid rgba(217,217,217, 0.5); 
+    border-right : 0;
+    border-top : 1px solid rgba(217,217,217, 0.5);
+    font-family: "ralewayBold";
+    font-size: 1.125em; 
+    width : 100%;         
 }
+
+::placeholder {          /*pour mettre la zone de saisie opaque et noire*/
+    color:black;
+    font-size : 1.1em;  
+    opacity : 1;    
+    padding-left : 15px;
+}
+
 input{
     border:none;                     
 }
 
-#boutonSubmit{
+#boutonSubmit {
     background-color : #0065FC;
+    border : 0;
+    border-radius : 0 15px 15px 0;    
     color : white;
     font-family: "ralewayBold";
     font-size: 1.125em;
-    border-radius : 0 20px 20px 0;
-    width : 132px;            /* pour respecter la proportionnalité du figma*/
+    height : 50px;
+    padding-left : 20px;
+    padding-right : 20px; 
+    width : 40%;                 
 }
 
-/* ========= PARTIE FILTRE=========*/
 
-#sectionFiltre{
+/* ========= SECTION FILTRE=========*/
+
+#sectionFiltre {
     display : flex;
-    flex-direction : row;
-    justify-content : space-around;
-    /*padding : 10px;*/
-    width :1100px;
-    
+    flex-wrap: wrap;                 /*Proposition d'amélioration en cas de reduction de la fenetre par l'utilisateur*/      
+    justify-content : left;
+    margin-top : 10px;
+    padding-top:20px;
+    /*width : 100%;*/
 }
 
-.iconefiltre{
+#H2filtre {
+    margin-top : 9px;
+}
+
+#touteslesIconesFiltres {
+    display:flex;      
+    justify-content: space-between;         
+}
+
+.deuxIconesFiltres{
     display : flex;
-    flex-direction : row;
-    justify-content : space-around;
+}
+
+.iconefiltre {
+    align-items: center;
     border :2px solid rgba(217,217,217);
     border-radius : 50px;
-    /*margin-left : 50px;*/
-   
+    display : flex;
+    flex-direction : row;
+    height : 40px;
+    justify-content:space-between;
+    margin-left: 45px;
 }
 
-.iconefiltre p{
-    display :flex;
-    align-items :center;
-    /*margin-left:8px;*/
-    /*vertical-align: middle;*/
+.iconefiltre:hover {            /*Changement de couleur des icones filtres au survol de la souris */
+    background-color :#DEEBFF;
 }
 
-.pIconeFiltre{
+.iconeFiltrelbeue {
+    color: #0065FC;
+    font-size : 1.2em;
+    padding-left : 10px;   
+}
+
+.pIconeFiltre {
     font-family: "ralewayBold";
     font-size: 1.2em;
-    /*margin:3px;*/
-    padding-left : 20px;
-    padding-right : 20px;
-   
+    padding-left : 10px;
+    padding-right : 20px;   
 }
 
-/*========= LOGO INFO =========*/
+.iconeBleue {
+    color: #0065FC;
+    font-size : 1.5em;             /* (Pour modifier la taille des iconesb) */
+    padding-left:20px;
+}
 
-#logoInfo{
+/*========= SECTION INFO =========*/
+
+#sectionInfo {
+    display : flex;
+    flex-direction : row;
+    justify-content : left;
+    padding-top : 20px;
+    width : 100%;
+}
+
+#pSectionInfo {
+    align-items:center;
+    display : flex;
+    justify-content: center;
+    padding-left : 13px;
+    vertical-align:middle;
+}
+
+#logoInfo {
+    align-items : center;
+    display : flex;
+}
+
+.fa-info { 
     border : 2px solid gray;
     border-radius: 50px;
-}
-
-
-
-
-/* < ========= GESTION DE LA COULEUR DES ICONES ========= */
-#etoiles{
-    color : blue;
-}
-
-.iconeBleue{
     color: #0065FC;
-    font-size : 1.5em;             /*Pour modifier la taille des icones*/
-}
-
-.fa-info{
-    color: #0065FC;
-}
-.iconeGrise{
-    color : rgb(217, 217, 217, 0.4);
+    font-size : 1em;
+    height : 20px;
+    text-align: center;
+    width : 20px;
 }
 
 
+/* ========= PARTIE HEBERGEMENT ET POPULAIRE ========*/
+
+#hebergementEtPopulaire {
+    display:flex;
+    height :625px;
+    justify-content : space-between;
+    margin-top : 30px;
+    width : 100%;
+}
+
+
+/* ========= PARTIE HEBERGEMENT ========= */
+
+#cadreGlobalHebergement { 
+    background-color : rgba(217,217,217, 0.5);   
+    border-radius : 20px;   
+    display:flex;
+    flex-direction : column;
+    height : 623px;               
+    padding :30px 30px 10px 30px;
+    width : 63%;
+}
+
+.troisCadresHebergement {
+    display : flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-bottom : 30px;
+    width : 100%;
+}
+
+.troisCadresHebergement, a {
+    width : 100%;
+}
+
+.cadrePhotoTexteHebergementMarseille {
+    background-color:white; 
+    border-radius:20px 20px 20px 20px;
+    box-shadow: 0px 0px 10px rgba(3, 0, 0, 0.1);
+    display:flex;
+    flex-direction : column; 
+    width : 90%;
+}
+
+.imgPhotoHeberg {
+    background-color : white;
+    border-radius : 20px 20px 0 0;
+    margin:5px 5px 0 5px;
+    width : 95%;  
+}
+
+.cadrePhotoTexteHebergementMarseille img {
+    border-radius : 20px 20px 0 0;
+    height : 124px;
+    width : 100%; 
+}
+
+.texteSousPhotoHebergement { 
+    display:flex;
+    flex-direction : column;
+    height : 70px;
+    justify-content : space-between;
+    margin-top:0;
+    padding-left : 20px; 
+    width : 100%; 
+}
+
+.fa-star {
+    font-size : 12px;
+    margin-top : 5px;
+    padding-bottom : 10px;
+}
+
+.texteSousPhotoHebergement, h3 {
+    margin-top:0px;
+}
+
+.pCadrePhoto {
+    margin:0px;
+}
+
+#afficherPlus {  
+    margin-left : 30px; 
+    margin-top : 30px;
+}
+
+
+/*============ LES PLUS POPULAIRES =========*/
+
+#cadreGlobalPopulaires {
+    background-color : rgba(217,217,217, 0.5);
+    border-radius : 20px;
+    height : 625px;    
+    padding : 20px; 
+    width : 27%;            
+}
+
+#containerH2TroisCadresPopulaire {          
+    display:flex;
+    flex-direction: column;
+    justify-content : center;
+    margin-top : 10px;    
+}
+
+#titreH2EtLogoLesPlusPopulaires {
+    align-items : center;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding :  0 15px; 
+    vertical-align : middle;
+}
 
 
 
 
-/* zone a effacer ulterieurement
-#text3{
-    font-family: "ralewayBold";
-    font-style: normal;
+.fa-chart-line {
+    font-size : 1em;
+}
+
+#carteLesPlusPopulaires {
+    align-items:center;
+    display:flex;
+    flex-direction: column;
+    height : 500px;
+    justify-content:space-between;
+}
+
+.cadrePhotoTexteLesPlusPopulaires {
+    background-color:white; 
+    border-radius:20px 20px 20px 20px;
+    box-shadow: 0px 0px 10px rgba(3, 0, 0, 0.1);
+    display : flex;
+    flex-direction : row;
+    height : 140px;
+    justify-content:left;  
+    padding : 5px 5px 5px 3px;
+    width : 95%;              
+}
+
+.imagePhotoPopulaire {
+    background-color : white;    
+    border-radius : 20px 0 0 20px; 
+    padding : 2px 0 2px 5px; 
+    width : 40%;  
+}
+
+
+
+
+.photoObjectFit { 
+    height : 100%;                  /* =========> à repositionner dans le CSS ==> appliqué à toutes les photos*/
+    object-fit: cover;              /*hebergement et populaires*/
     
-font-weight: 700;
-font-size: 16px;
-line-height: 19px;
-
 }
 
-#text2{
-    
-    font-family: "ralewayBold";
-    font-style: normal;
-font-weight: 700;
-font-size: 22px;
-line-height: 26px;
+.cadrePhotoTexteLesPlusPopulaires img {
+    border-radius : 20px 0 0px 20px;
+    width : 100%;
 }
 
-#text{
-    font-family:"ralewayRegular";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+.texteACotePhotoPopulaire {
+    height :125px;           
+    margin-right : 10px;
+    margin-top : 15px;
+    padding-left : 18px;
+    width : 50%;
 }
+.premierePartieTextePhotoPopulaire p {
+    margin-top : 3px;
+}
+
+.premierePartieTextePhotoPopulaire { 
+    display: flex;
+    flex-direction : column;
+    height : 100px;
+    margin-bottom : 0;
+}
+
+.etoilesPopulaires {
+  margin-bottom : 0;
+}
+
+
+/* ========= ACTIVITES A MARSEILLE =========*/
+
+.cadreGlobalActivites {
+    display : flex;
+    flex-direction : column;
+    padding-top : 80px;
+    width : 100%;
+}
+
+#activites {
+    margin-bottom : 30px;
+}
+
+#cadresPhotoActivites {
+    display : flex;
+    justify-content : space-around;
+    width : 100%;
+}
+
+#cadresPhotoActivites a {
+    width : 22%;
+}
+
+#cadresPhotoActivites img {                
+    border-radius : 20px 20px 0 0;
+    height : 444px;
+    width : 100%;          
+}
+
+#cadresPhotoActivites h3 {
+    align-items : center;
+    border-radius : 0 0 20px 20px; 
+    display : flex;
+    height : 56px;
+    padding-left : 20px;
+}
+
+.ombreCadrePhoto img {
+    box-shadow: 0px 0px 30px  rgba(3, 0, 0, 0.1);
+}
+
+.ombreCadrePhoto {
+    border-radius : 20px;
+    box-shadow: 0px 0px 10px rgba(3, 0, 0, 0.1);
+}
+
+
+/* ========= FOOTER =========*/
+
+footer {
+    background-color : #D9D9D9;
+    height : 225px;
+    margin-top : 70px;
+    width : 100%;
+}
+
+
+#troisParagraphesFooter {
+    display:flex;
+    flex-direction : row;
+    height : auto;
+    justify-content : space-between;
+    padding-bottom : 70px;
+    padding-left : 80px;
+    padding-top : 50px;
+    width : 70%;
+}
+
+
+
+
+/*
+==================================================
+==================================================
+==================================================
+==================================================
+==================================================
+==================================================
 */
+
+
+@media all and (max-width: 992px) {              /* and (min-width: 769px) */
+    
+    header {
+        width : 100%;        
+    }
+
+    body {
+        padding : 10px 40px ;
+    }
+
+    main {
+        width : 100%;    
+    }
+        
+        
+    /* ========= SECTION HEADER =========*/
+
+    #navHeader {
+        width : 33%;
+    }
+
+    /* ======== SECTION RECHERCHER ========= */
+    #pLogoMaps {
+        width : 6%;
+    }
+
+    #formulaireRecherche {
+        width : 50%;
+    }
+
+    #pFormulaireRecherche {
+        width : 100%;
+    }
+
+    #saisieRecherche {
+        width : 240px;
+    }
+
+
+    /* ========= SECTION FILTRE =========*/
+
+    #sectionFiltre{
+        margin : 0 auto;        
+    }
+
+    .iconefiltre {        
+        margin-left: 20px;
+    }
+        
+        
+    /* ========= SECTION HEBERGEMENT ET POPULAIRE ========= */
+
+    #hebergementEtPopulaire {
+        display : flex;
+        flex-wrap :wrap;
+        height : auto;
+        justify-content : center;
+        margin-top : 20px;
+    }
+
+    #cadreGlobalHebergement {
+        height : 625px;
+        padding-top : 20px;
+        padding-bottom : 0;
+        width : 100%;
+    }
+
+    #cadreGlobalPopulaires {
+        height : 260px;
+        margin-top : 50px;
+        width:850px; 
+    }
+
+    #titreH2EtLogoLesPlusPopulaires {   
+        height : 40px;
+        padding-bottom : 20px;
+        width :820px;
+    }
+
+    #carteLesPlusPopulaires {    
+        flex-direction : row;
+        height : auto; 
+        margin-bottom : 30px; 
+        padding-left : 3px;
+        padding-right : 13px;
+    }
+
+    .cadrePhotoTexteLesPlusPopulaires {
+        height : 144px;
+        justify-content : space-around;
+        padding : 3px 0 3px 0; 
+        width : 260px; 
+    }
+
+    .cadrePhotoTexteLesPlusPopulaires img {
+        width:100px;
+    }
+
+    .texteACotePhotoPopulaire {
+        
+        /*margin : 8px 0 0 3px;*/
+        width : 90%;  
+    }
+
+    .premierePartieTextePhotoPopulaire p {
+        font-size : 80%;
+        margin-top : 8px;
+    }
+
+
+    /* ========= SECTION ACTIVITES =========*/
+
+    #cadresPhotoActivites{
+        margin-top : 30px;
+    }
+
+    #cadresPhotoActivites a {
+        width : 21.2%;
+    }
+
+    #cadresPhotoActivites img {
+        border-radius : 20px 20px 0 0;
+        height : 267px;
+        width : 100%;               /* 182px */
+    }
+
+    .ombreCadrePhoto h3 {
+        font-size : 1em; 
+        padding : 0;
+        width : 155px; 
+    }
+    #pNotreDame {
+        width : 120px;
+    }
+
+    /* ========= FOOTER ========= */
+
+    #troisParagraphesFooter {
+    width : 650px;
+    }    
+
+    footer h3 {
+        margin-bottom : 30px;
+    }
+}
+
+/*
+==================================================
+==================================================
+==================================================
+==================================================
+==================================================
+==================================================
+*/
+
+
+@media all and (max-width: 768px) {
+    
+    body {
+        padding :0;
+        margin : 0;
+        /*width : 100%;*/
+    }  
+
+    header {
+        align-items : center;
+        background-color : white;
+        display : flex;
+        flex-direction : column;
+        width : 100%;
+    }
+
+    #logo {
+        margin-bottom : 90px;
+        margin-top : 60px;   
+    }
+
+    #logoBooki {    
+        margin : 0 auto;
+        width : 100%;
+    }
+
+    #navHeader {
+        margin-bottom : 40px;
+        font-size : 2.8em;
+        width : 100%;
+    }
+
+    #navHeader p {
+        border-bottom :6px rgba(217,217,217, 0.5) solid;
+        padding-bottom : 30px;
+        width : 50%;
+    }
+
+    #navHeader p:hover {
+        border-top : 0;                           /* Barre bleue qui apparait */
+        border-bottom :2px solid #0065fc;          /*au survol pour qu'elle apparaisse en bas de la zone */
+        color : blue;
+    }
+
+    .navPSurvol:hover {
+        color : #0065fc;
+        text-decoration :none; 
+    }
+        
+            
+    /* ======== SECTION TITRE PRINCIPAL ========*/
+
+    #sectionTitrePrincipal {
+        background-color : white;
+        margin : 0;
+        max-width : 87%;
+        padding :30px 60px 0 60px ;
+    }
+
+    #sectionTitrePrincipal h1 {
+        font-size : 2.5em;
+        margin-top : 0;
+    }
+
+    #sectionTitrePrincipal p {
+        font-size : 2em;
+        height : 50px;
+        margin-bottom : 0;
+    }
+
+    /* ========= SECTION RECHERCHER =========*/
+
+    #sectionRecherche { 
+        background-color: white;
+        display : flex;
+        flex-direction: row;
+        height :190px; 
+        justify-content : center;
+        margin : 0 30px 0 30px;         
+        padding-top : 80px;
+        width : 90%;
+    }
+
+    #boutonSubmit{
+        display : none;
+    }
+
+    #pLogoMaps{    
+        border-radius :50px 0 0 50px;
+        height : 150px;
+        width : 20%; 
+    }
+
+    .fa-location-dot {
+        font-size : 2.5em;
+    }
+
+    .pFormulaireRecherche .inputFormulaireRecherche {
+        height : 70%;  
+    }
+
+    #formulaireRecherche {
+        height : 150px;
+        width : 80%
+    }
+
+    #saisieRecherche {        
+        font-family: "ralewayBold";
+        font-size : 200%; 
+        height : 147px;
+        padding-left : 30px;
+        width : 100%;     
+    }
+
+    #boutonSubmitIcone {
+        background-color : #0065FC;
+        border : none;
+        border-radius :0 50px 50px 0;
+        display : block;
+        height : 150px;
+        width :33%;
+    }           
+
+    .fa-magnifying-glass {
+        color : white;
+        font-size : 2em;
+    }
+
+    ::placeholder {          
+        opacity : 1;   
+        padding-left : 15px;
+    }   
+
+
+    /* ========= SECTION FILTRE ========= */
+
+    #sectionFiltre {
+        background-color :white;
+        flex-direction : column;    
+        padding :30px 0 0 50px;
+       /* width : 100%;   */
+    }
+
+    #H2filtre {
+        font-size : 3em;
+        margin-top : 0px;
+        padding :30px 50px 0 0px;
+        width : 80%;
+    }
+
+    #touteslesIconesFiltres {
+        align-items :flex-start;              
+        flex-direction : column;
+        padding-left : 0px;
+        margin : 0;
+    }
+
+    .deuxIconesFiltres{
+        justify-content : space-between;
+        margin-bottom : 40px;
+        width : 90%;
+    }
+
+    .iconefiltre {
+        border :5px solid rgba(217,217,217);
+        border-radius : 70px;
+        font-size : 1.5em;
+        height : 110px;
+        justify-content:left;
+        margin-left: 0;
+        width : 47%;
+    }
+
+    .iconeFiltrelbeue {
+        color: #0065FC;
+        font-size : 1.6em;
+        padding-left : 20px;   
+    }
+
+    .pIconeFiltre {
+        font-size : 1em;
+        padding-left : 20px;
+    }
+
+    /*========= SECTION INFO =========*/
+
+    #sectionInfo {    
+        padding-left : 50px;
+        padding-bottom : 70px;
+        width : 90%;    
+    }
+
+    #logoInfo {
+        display : flex;    
+        justify-content : center;
+    }
+
+
+    .fa-info { 
+        font-size : 2em;
+        height : 50px; 
+        padding-top : 5px; 
+        width : 55px;
+    }
+
+    #pSectionInfo {
+        font-size : 1.9em;
+        margin-bottom : 0;
+        margin-left : 30px;
+        margin-top : 0;
+    }
+
+    /* ========= PARTIE HEBERGEMENT ET POPULAIRE ========*/
+
+    #hebergementEtPopulaire {
+        display:flex;
+        flex-direction :column;
+        height :auto;
+        justify-content : left;
+        margin-top : 30px;
+        
+    }
+
+    .deuxCadresHeberEtPop:nth-child(1) {        /* Modification de l'ordre des cadres */
+        order : 2;
+    }
+
+    .deuxCadresHeberEtPop:nth-child(2) {
+        order : 1;
+    }
+
+    /*============ LESP PLUS POPULAIRES =========*/
+
+    #cadreGlobalPopulaires {
+        background-color : rgba(217,217,217, 0.5);
+        border-radius : 0px; 
+        height : 1560px;
+        margin-top : 0px;
+        padding : 0;
+        width : 100%;
+    }
+
+    #containerH2TroisCadresPopulaire {          
+        height : 1500px;
+        justify-content :flex-start;
+        padding-top : 50px; 
+    }
+
+    #titreH2EtLogoLesPlusPopulaires {    
+        font-size : 2.5em;
+        margin : 0 auto; 
+        padding-bottom : 90px;
+        padding-top : 0px;    
+        width : 93%;
+    }
+
+    .fa-chart-line{
+        font-size : 1.2em;
+    }
+
+    #carteLesPlusPopulaires {
+        
+        align-items:center;
+        display:flex;
+        flex-direction: column;
+        height : 1150px;
+        justify-content:space-between;
+        margin-bottom : 100px;
+        margin: 0 auto;
+        padding-bottom : 50px;
+        width : 90%;
+    }
+
+    .cadrePhotoTexteLesPlusPopulaires {
+        border-radius:50px 50px 50px 50px;
+        height : 340px;
+        margin-top : 25px;
+        padding : 10px 10px 10px 10px;
+        width : 100%;     
+    }
+
+    .cadrePhotoTexteLesPlusPopulaires img {              
+        border-radius : 50px 0 0px 50px;
+        width :100%;    
+    }
+    .imagePhotoPopulaire {   
+        margin : 5px 0 5px 0px;
+        width : 40%;    
+    }
+
+    .texteACotePhotoPopulaire {
+        display : flex;
+        flex-direction : column;
+        height :100%; 
+        justify-content : space-between;   
+        margin-top : 0px; 
+        width : 50%;    
+    }
+
+    .premierePartieTextePhotoPopulaire h3 {
+        font-size : 2.8em;
+        padding-top : 30px;
+        padding-bottom : 20px;    
+    }
+
+    .premierePartieTextePhotoPopulaire p {
+        font-size : 2.3em;
+        height : 500px;
+        margin-top : 5px;    
+    }
+
+    .etoilesPopulaires {
+        padding-bottom : 10px;
+    }
+
+    .etoilesPopulaires .fa-star {
+        font-size : 2em;
+        margin-bottom : 5px;
+    }
+
+    /* ========= HEBERGEMENT ========= */
+
+    #cadreGlobalHebergement {
+        background-color : white;
+        border-radius : 0;
+        height : auto;
+        margin : 0;
+        padding-bottom : 150px;
+        /*padding-right : 40px;*/
+        width : 90%;
+    }
+
+    .deuxCadresHeberEtPop {
+        margin : 0 auto;
+    }
+
+    #containerh2TroisCadresHebergement {
+        background-color : white;
+        display : flex;
+        flex-direction : column;
+        height : auto;
+        justify-content : space-between;
+        padding : 0;    
+        width : 100%;                            
+    }
+
+    #H2hebergement {
+        font-size :3em;
+        padding-left : 8px;
+    }
+
+    .troisCadresHebergement {  
+        flex-direction: column;
+        height :auto;
+        /*padding-left : 40px;*/
+        width : 100%;
+        margin : 30px 0 0 0;
+    }
+
+    .troisCadresHebergement a {
+        height : 450px;
+        padding :30px 0 ;
+        width : 100%;
+    }
+
+    .cadrePhotoTexteHebergementMarseille { 
+        border-radius:50px;
+        box-shadow: 10px 10px 10px rgba(3, 0, 0, 0.1), -10px -10px 10px rgba(3, 0, 0, 0.1);
+        height : 100%;
+        width : 100%;
+    }
+
+    .imgPhotoHeberg {
+        height : 57%;
+        margin-left : 10px;
+        width : 95%;   
+    }
+
+    .cadrePhotoTexteHebergementMarseille img {
+        border-radius : 50px 50px 0 0;
+        height : 100%;    
+        margin-left : 10px;
+        margin-right : 0px; 
+        margin-top: 10px;   
+        width : 100%;
+    }
+
+    .texteSousPhotoHebergement { 
+        font-size : 2em;   
+    }
+
+    .texteSousPhotoHebergement, h3 {
+        font-size : 1.5em;
+        margin-top:10px;    
+    }
+
+    .pCadrePhoto {
+        font-size : 1.5em;
+        margin-top:10px;
+    }
+
+    .fa-star {
+        font-size : 1.4em;
+        margin-top :20px;
+    }
+    #afficherPlus {
+        display : none;
+    }
+
+
+    /* ========= ACTIVITES A MARSEILLE =========*/
+
+    .cadreGlobalActivites {
+        
+        background-color : white;
+        height : auto;
+        justify-content :space-around;
+        margin : 0 auto;
+        /*padding-left : 70px;*/
+        /*padding-right : 70px;*/
+        padding-top : 50px;
+        width : 100%;
+    }
+
+    #activites {    
+        font-size : 4em;
+        margin-bottom : 0;       
+        padding-left : 30px;
+        width : 400px;
+        
+    }
+
+    #cadresPhotoActivites {
+        border-radius : 50px 50px 0 0;
+        flex-direction : column;
+        height :auto;
+        justify-content :space-between;
+        /*margin-top : 15px;*/
+        /*margin-bottom : 80px;*/
+        padding-bottom : 70px;
+        padding-left : 20px;
+        width : 95%;
+    }
+
+    #cadresPhotoActivites a {
+        width : 100%;
+    }
+
+    #cadresPhotoActivites article {
+        border-radius : 50px 50px 50px 50px;    
+        height : 450px;
+        margin-top : 60px;
+        width : 100%;
+        
+    }
+    
+    #cadresPhotoActivites img {    
+        border-radius : 50px 50px 0 0;
+        height : 300px;
+        width : 100%;
+    }
+
+    #cadresPhotoActivites h3 {
+        padding-left : 50px;
+        padding-top : 30px;
+        font-size : 2.7em;
+        width : 80%;
+    }
+
+
+    /* ========= FOOTER =========*/
+
+    footer {    
+        background-color : #D9D9D9;    
+        height : auto;
+        margin-top : 70px;
+        padding-top : 30px;
+        width : 100%;
+    }
+
+
+    #troisParagraphesFooter {
+        display:flex;
+        flex-direction : column;    
+        justify-content : space-between;
+        padding-left : 50px;
+        width : 80%;    
+    }
+
+    #troisParagraphesFooter h3 {
+        font-size : 3em;
+        margin-bottom : 4px;
+       /* padding-top : 50px;
+        padding-bottom : 20px;
+        width : 300px; */  
+    }
+
+    .h3Footer {
+        width : 100%;
+
+    }
+
+    .pFooter {
+        font-size : 2em;
+        line-height: 0.8em; 
+    }            
+}
+    
+    
+
+
