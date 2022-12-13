@@ -78,18 +78,20 @@ header {
 }
 
 #navHeader p {
-    align-items: center;
+    align-items: center; 
+   /* border-top :2px solid rgba (0,0,0,0);*/   /* =====*/
     display :flex;
     height : 100px;
     justify-content: center;
     margin-bottom : 0px;    
-    margin-top:0px;    
+    margin-top:2px;                 /*Pour compenser le texte qui se baisse quand suvol souris */
     width : 60%;
 }
 
 #navHeader p:hover {                           /* Barre bleue qui apparait */
     border-top :2px solid #0065fc;          /*au survol pour qu'elle apparaisse en haut de la page */
-    color : #0065fc;                      
+    color : #0065fc; 
+   margin-top : 0;                             /* pour compenser texte qui se baisse au survol de la souris */
 }
 .navPSurvol {
     text-align : center;
@@ -498,7 +500,7 @@ input{
 
 .ombreCadrePhoto {
     border-radius : 20px;
-    box-shadow: 0px 0px 10px rgba(3, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(3, 0, 0, 0.3);
 }
 
 
