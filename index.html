@@ -15,8 +15,6 @@
     <!-- ==> Penser à intégrer le lien avec fichier de gestion du formulaire <== -->  
   </head>
 
-<!-- LE CODE NE CONTIENT AUCUNE PROPRIETE CSS -->
-<!-- COMPATIBLE CHROME ET MOZILLA -->
   <body>
     <header>            <!-- Utilisation des balises header / nav / main / h1 h2 h3 /article / footer / section -->
       <div id = "logo">    
@@ -31,7 +29,7 @@
 
     <main>
       <section id="sectionTitrePrincipal">
-        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>  <!--Titre H1  -->
         <p>En plein centre-ville ou en pleine nature</p>
       </section>
       
@@ -46,6 +44,7 @@
           <input type = "text" name = "saisieRecherche" placeholder = "Marseille, France" id = "saisieRecherche">
           <button type = "submit" id = "boutonSubmit">Rechercher</button> 
           <button type = "submit" id="boutonSubmitIcone"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <!-- Deux bouton submit mais présence en fonction de la version mobile ou pas -->
         </form>
       </div>
 
@@ -53,7 +52,7 @@
         <h2 id= "H2filtre">Filtres</h2>
         <div id="touteslesIconesFiltres">          
           <div class = "deuxIconesFiltres">  
-            <div class = "iconefiltre"> <!-- Utilisation des class de même identifiant -->
+            <div class = "iconefiltre">   <!-- Utilisation des class de même identifiant -->
               <i class="fa-sharp fa-solid fa-money-bill-wave iconeFiltrelbeue"></i>
               <div class = "pIconeFiltre">Économique</div>
             </div>
@@ -86,7 +85,7 @@
 
 
       <div id = "hebergementEtPopulaire">
-        <section id = "cadreGlobalHebergement" class = "deuxCadresHeberEtPop">
+        <section id = "cadreGlobalHebergement" class = "deuxCadresHeberEtPop">  <!--La class sert à l'inversion des cacdre en version mobile-->
           <article id="containerh2TroisCadresHebergement">
             <h2 id = "H2hebergement">Hébergements à Marseille</h2>
             
@@ -101,7 +100,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star iconeGrise"></i>
+                    <i class="fa-solid fa-star iconeGrise"></i>   <!--class supplementaire pour griser la dernière étoile-->
                   </div>
                 </article>
               </div></a>

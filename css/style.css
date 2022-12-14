@@ -14,11 +14,11 @@ body {
 h1, h2 {
     font-family: 'Raleway', sans-serif;
     font-weight : bold;
-    font-size: 140%;    
+    font-size: 140%;
 }
 
 p {
-    font-family: 'Raleway', sans-serif;                        /*font-family : "ralewayRegular";*/
+    font-family: 'Raleway', sans-serif;             /* Mise en place de la font raleway */
     font-size : 1em;
 }
 
@@ -40,7 +40,7 @@ a {
 .etoiles{
     color : #0065FC;
 }
-.iconeGrise{
+.iconeGrise{                                    /*class iconeGrise */
     color : rgb(217, 217, 217, 0.4);   
 }
 
@@ -58,7 +58,7 @@ header {
 }
 
 #logoBooki {
-    width : 33%;           /*Conformité avec figma*/
+    width : 33%;          
 }
 
 #navHeader {
@@ -70,7 +70,6 @@ header {
 
 #navHeader p {
     align-items: center; 
-   /* border-top :2px solid rgba (0,0,0,0);*/   /* =====*/
     display :flex;
     height : 100px;
     justify-content: center;
@@ -85,7 +84,7 @@ header {
     margin-top : 0;                             /* pour compenser texte qui se baisse au survol de la souris */
 }
 .navPSurvol {
-    text-align : center;
+    text-align : right;
 }
 
 .navPSurvol:hover {
@@ -105,7 +104,7 @@ header {
 
 
 /* ========= SECTION RECHERCHE ========*/
-#boutonSubmitIcone {
+#boutonSubmitIcone {                        /* on a enlevé l'icone submit */
     display : none;
 }
 
@@ -227,7 +226,7 @@ input{
 
 .iconeBleue {
     color: #0065FC;
-    font-size : 1.5em;             /* (Pour modifier la taille des iconesb) */
+    font-size : 1.5em;             /* (Pour adapter la taille des icones) */
     padding-left:20px;
 }
 
@@ -280,7 +279,7 @@ input{
 
 #cadreGlobalHebergement { 
     background-color : rgba(217,217,217, 0.5);   
-    border-radius : 20px;   
+    border-radius : 20px;                           /* Arrondir les angles du cadre gris hebergement */
     display:flex;
     flex-direction : column;
     height : 623px;               
@@ -410,7 +409,7 @@ input{
 }
 
 .photoObjectFit { 
-    height : 100%;                  /* =========> à repositionner dans le CSS ==> appliqué à toutes les photos*/
+    height : 100%;                  /* appliqué à toutes les photos*/
     object-fit: cover;              /*hebergement et populaires*/
     
 }
@@ -482,7 +481,7 @@ input{
 }
 
 .ombreCadrePhoto img {
-    box-shadow: 0px 0px 30px  rgba(3, 0, 0, 0.1);
+    box-shadow: 0px 0px 30px  rgba(3, 0, 0, 0.2);
 }
 
 .ombreCadrePhoto {
@@ -515,7 +514,7 @@ footer {
 /*
 ==================================================
 ==================================================
-==================================================
+=============== VERSION TABLETTE =================
 ==================================================
 ==================================================
 ==================================================
@@ -564,7 +563,8 @@ footer {
     /* ========= SECTION FILTRE =========*/
 
     #sectionFiltre{
-        margin : 0 auto;        
+        margin : 0 auto;
+        width : 95%;        
     }
 
     .iconefiltre {        
@@ -576,7 +576,7 @@ footer {
 
     #hebergementEtPopulaire {
         display : flex;
-        flex-wrap :wrap;
+        flex-direction : column;        /* Mise en colonne des deux section */
         height : auto;
         justify-content : center;
         margin-top : 20px;
@@ -586,19 +586,19 @@ footer {
         height : 625px;
         padding-top : 20px;
         padding-bottom : 0;
-        width : 100%;
+        width : 93%;              
     }
 
     #cadreGlobalPopulaires {
         height : 260px;
         margin-top : 50px;
-        width:850px; 
+        width:95%;         
     }
 
     #titreH2EtLogoLesPlusPopulaires {   
         height : 40px;
         padding-bottom : 20px;
-        width :820px;
+        width :96%;
     }
 
     #carteLesPlusPopulaires {    
@@ -666,7 +666,7 @@ footer {
     /* ========= FOOTER ========= */
 
     #troisParagraphesFooter {
-    width : 650px;
+    width : 70%;
     }    
 
     footer h3 {
@@ -677,7 +677,7 @@ footer {
 /*
 ==================================================
 ==================================================
-==================================================
+=============== VERSION MOBILE ===================
 ==================================================
 ==================================================
 ==================================================
@@ -725,17 +725,22 @@ footer {
     }
 
     #navHeader p:hover {
-        border-top : 0;                           /* Barre bleue qui apparait */
-        border-bottom :6px solid #0065fc;          /*au survol pour qu'elle apparaisse en bas de la zone */
-        margin-top : 2px;
+        border-top : 0;                           /* Barre bleue qui disparait en haut */
+        border-bottom :6px solid #0065fc;       /*au survol pour qu'elle apparaisse en bas de la zone */
+        margin-top : 2px;                         /* ajout d'une margin pour compenser le déplacement du texte lorsque hover */
         
+    }
+
+    .navPSurvol {
+        text-align : center;
     }
 
     .navPSurvol:hover {
         color : #0065fc;
+        text-align : center;
         text-decoration :none; 
     }
-        
+    
             
     /* ======== SECTION TITRE PRINCIPAL ========*/
 
@@ -794,8 +799,9 @@ footer {
     }
 
     #saisieRecherche {        
-        font-family: "ralewayBold";
-        font-size : 200%; 
+        font-family: 'Raleway', sans-serif;    
+        font-size : 200%;  
+        font-weight : bold;        
         height : 127px;
         padding-left : 30px;
         width : 100%;     
@@ -920,7 +926,7 @@ footer {
     /*============ LESP PLUS POPULAIRES =========*/
 
     #cadreGlobalPopulaires {
-        background-color : rgba(217,217,217, 0.5);
+        background-color : rgba(217,217,217, 0.5);          
         border-radius : 0px; 
         height : 1400px;
         margin-top : 0px;
@@ -959,10 +965,10 @@ footer {
     }
 
     .cadrePhotoTexteLesPlusPopulaires {
-        border-radius:50px 50px 50px 50px;
+        border-radius:50px;
         height : 340px;
         margin-top : 25px;
-        padding : 10px 10px 10px 10px;
+        padding : 10px;
         width : 100%;     
     }
 
@@ -1008,7 +1014,7 @@ footer {
     /* ========= HEBERGEMENT ========= */
 
     #cadreGlobalHebergement {
-        background-color : white;
+        background-color : white;   /*Modification de la couleur du fond */
         border-radius : 0;
         height : auto;
         margin : 0;
@@ -1096,8 +1102,7 @@ footer {
 
     /* ========= ACTIVITES A MARSEILLE =========*/
 
-    .cadreGlobalActivites {
-        
+    .cadreGlobalActivites {        
         background-color : white;
         height : auto;
         justify-content :space-around;
@@ -1150,20 +1155,14 @@ footer {
 
 
     /* ========= FOOTER =========*/
-
-    footer {    
-        background-color : #D9D9D9;    
-        height : auto;
-        margin-top : 70px;
-        padding-top : 30px;
-        width : 100%;
+        
+    footer {                
+        height : auto;        
+        padding-top : 30px;        
     }
 
-
     #troisParagraphesFooter {
-        display:flex;
-        flex-direction : column;    
-        justify-content : space-between;
+        flex-direction : column; 
         padding-left : 50px;
         width : 80%;    
     }
