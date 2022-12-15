@@ -18,7 +18,7 @@ h1, h2 {
 }
 
 p {
-    font-family: 'Raleway', sans-serif;             /* Mise en place de la font raleway */
+    font-family: 'Raleway', sans-serif;             /* Mise en place de l    */
     font-size : 1em;
 }
 
@@ -47,7 +47,7 @@ a {
 
 /* ========= HEADER =========*/
 header {
-    display : flex;         /* Recommandation d'utiliser flexbox (utilisé sur une grande partie du CSS*/
+    display : flex;         /* Recommandation d'utiliser flexbox (utilisé sur une grande partie du CSS)*/
     flex-direction : row;
     justify-content:space-between;
 }
@@ -563,12 +563,16 @@ footer {
     /* ========= SECTION FILTRE =========*/
 
     #sectionFiltre{
-        margin : 0 auto;
+        margin-top : 10px;
         width : 95%;        
     }
 
     .iconefiltre {        
         margin-left: 20px;
+    }
+
+    .pIconeFiltre {
+        font-size : 1.1em;
     }
         
         
@@ -816,7 +820,7 @@ footer {
         width :33%;
     }           
 
-    .fa-magnifying-glass {
+    .fa-magnifying-glass {              /*Couleur de l'icone qui doit être blanche */
         color : white;
         font-size : 2em;
     }
@@ -955,7 +959,7 @@ footer {
     #carteLesPlusPopulaires {        
         align-items:center;
         display:flex;
-        flex-direction: column;
+        flex-direction: column;         /*cartes à nouveau en colonnes */
         height : 1150px;
         justify-content:space-between;
         margin-bottom : 100px;
@@ -1015,7 +1019,7 @@ footer {
 
     #cadreGlobalHebergement {
         background-color : white;   /*Modification de la couleur du fond */
-        border-radius : 0;
+        border-radius : 0;              /* bordures à angle droit */
         height : auto;
         margin : 0;
         padding-bottom : 30px;
@@ -1121,7 +1125,7 @@ footer {
 
     #cadresPhotoActivites {
         border-radius : 50px 50px 0 0;
-        flex-direction : column;
+        flex-direction : column;            /*--*/
         height :1850px;
         justify-content :space-between;
         margin-top : 0px;
@@ -1162,7 +1166,7 @@ footer {
     }
 
     #troisParagraphesFooter {
-        flex-direction : column; 
+        flex-direction : column;        /* mise en colonne */
         padding-left : 50px;
         width : 80%;    
     }
