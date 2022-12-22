@@ -712,8 +712,9 @@ footer {
 @media all and (max-width: 768px) {
     
     body {
-        padding :0;
+        padding:0;
         margin : 0;
+       
     }  
 
     header {
@@ -734,11 +735,11 @@ footer {
     
     #logoBooki {        
         margin : 0 auto;
-        width : 100%;
+        width : 90%;
     }
 
     #navHeader {
-        margin-bottom : 40px;        
+        margin-bottom : 20px;        
         font-size : 2em;
         width : 100%;
     }
@@ -757,7 +758,7 @@ footer {
     #navHeader li {
         border-bottom :6px rgba(217,217,217, 0.5) solid;
         padding-bottom : 8px;
-        font-size : 1.1em;
+        font-size : 1em;
     }
 
     #navHeader li:hover {
@@ -783,7 +784,7 @@ footer {
     }
 
     #sectionTitrePrincipal h1 {
-        font-size : 2.6em;
+        font-size : 2.5em;
         margin-top : 0;
     }
 
@@ -831,7 +832,7 @@ footer {
 
     #saisieRecherche {        
         font-family: 'Raleway', sans-serif;    
-        font-size : 200%;  
+        font-size : 2em;  
         font-weight : bold;        
         height : 127px;
         padding-left : 30px;
@@ -852,7 +853,8 @@ footer {
         font-size : 2em;
     }
 
-    ::placeholder {          
+    ::placeholder { 
+        font-size : 1em;         
         opacity : 1;   
         padding-left : 15px;
     }   
@@ -862,12 +864,14 @@ footer {
 
     #sectionFiltre {
         background-color :white;
-        flex-direction : column;    
-        padding :30px 0 0 40px;       
+        flex-direction : column;
+        margin-right : 0;    
+        padding :30px 0 0 30px; 
+        width : 90%;      
     }
 
     #H2filtre {
-        font-size : 3em;
+        font-size : 2.8em;
         margin-top : 0px;
         padding :30px 50px 0 0px;
         width : 80%;
@@ -878,18 +882,18 @@ footer {
         flex-direction : column;
         padding-left : 0px;
         margin : 0;
+        width : 100%;
     }
 
     .deuxIconesFiltres{
         justify-content : space-between;
         margin-bottom : 40px;
-        width : 94%;
+        width : 100%;
     }
 
     .iconefiltre {
         border :5px solid rgba(217,217,217);
-        border-radius : 70px;
-        font-size : 1.5em;
+        border-radius : 70px;        
         height : 110px;
         justify-content:left;
         margin-left: 0;
@@ -898,19 +902,20 @@ footer {
 
     .iconeFiltrelbeue {
         color: #0065FC;
-        font-size : 1.6em;
+        font-size : 200%;      
         padding-left : 20px;   
     }
 
     .pIconeFiltre {
-        font-size : 1em;
-        padding-left : 20px;
+        font-size : 100%;
+        padding-left : 10px; 
+        padding-right : 0;       
     }
 
     /*========= SECTION INFO =========*/
 
     #sectionInfo {    
-        padding-left : 50px;
+        padding-left : 30px;
         padding-bottom : 70px;
         width : 90%;    
     }
@@ -928,7 +933,7 @@ footer {
     }
 
     #pSectionInfo {
-        font-size : 1.9em;
+        font-size : 150%;
         margin-bottom : 0;
         margin-left : 30px;
         margin-top : 0;
@@ -941,7 +946,8 @@ footer {
         flex-direction :column;
         height :auto;
         justify-content : left;
-        margin-top : 30px;        
+        margin-top : 30px;
+        width : 100%;        
     }
 
     .deuxCadresHeberEtPop:nth-child(1) {        /* Modification de l'ordre des cadres */
@@ -977,8 +983,11 @@ footer {
         width : 93%;
     }
 
+    #titreH2EtLogoLesPlusPopulaires h2{
+        font-size :100%;
+    }
     .fa-chart-line{
-        font-size : 1.2em;
+        font-size : 1em;
     }
 
     #carteLesPlusPopulaires {        
@@ -990,6 +999,8 @@ footer {
         margin-bottom : 100px;
         margin: 0 auto;
         padding-bottom : 50px;
+        padding-left : 0;
+        padding-right :0;
         width : 90%;
     }
 
@@ -1020,13 +1031,13 @@ footer {
     }
 
     .premierePartieTextePhotoPopulaire h3 {
-        font-size : 2.2em;
+        font-size : 2em;
         padding-top : 30px;
         padding-bottom : 20px;    
     }
 
     .premierePartieTextePhotoPopulaire p {
-        font-size : 2em;
+        font-size : 1.9em;
         height : 500px;
         margin-top : 5px;    
     }
@@ -1046,8 +1057,8 @@ footer {
         background-color : white;   /*Modification de la couleur du fond */
         border-radius : 0;              /* bordures à angle droit */
         height : auto;
-        margin : 0;
-        padding-bottom : 30px;
+        margin : 0 auto;
+        padding : 30px 0 10px 0px;
         width : 90%;
     }
 
@@ -1066,7 +1077,7 @@ footer {
     }
 
     #H2hebergement {
-        font-size :3em;
+        font-size :2.4em;
         margin-bottom : 10px;
         padding-left : 8px;
     }
@@ -1106,12 +1117,12 @@ footer {
         width : 100%;
     }
 
-    .texteSousPhotoHebergement { 
-        font-size : 2em;   
+    .texteSousPhotoHebergement {        
+       width : 95%;   
     }
 
     .texteSousPhotoHebergement, h3 {
-        font-size : 1.5em;
+        font-size : 1.4em;
         margin-top:10px;    
     }
 
@@ -1133,19 +1144,19 @@ footer {
 
     .cadreGlobalActivites {        
         background-color : white;
-        height : 2150px;
+        height : 2050px;
         justify-content :flex-start;
-        margin-top: 0;
-        margin-bottom : 0;
+        margin : 0 auto;        
+        padding-left : 0;
         padding-top : 50px;
         width : 95%;
     }
 
     #activites {    
-        font-size : 4em;
+        font-size : 3em;
         margin-bottom : 10px;       
         padding-left : 30px;
-        width : 400px;        
+        width : 80%;        
     }
 
     #cadresPhotoActivites {
@@ -1154,7 +1165,7 @@ footer {
         height :1500px;
         justify-content :space-between;
         margin-top : 0px;
-        padding-left : 20px;
+        padding-left : 15px;
         width : 95%;
     }
 
@@ -1177,7 +1188,7 @@ footer {
     #cadresPhotoActivites h3 {
         padding-left : 50px;
         padding-top : 20px;
-        font-size : 2.3em;
+        font-size : 2.2em;
         width : 80%;
     }
 
@@ -1185,8 +1196,11 @@ footer {
     /* ========= FOOTER =========*/
         
     footer {                
-        height : auto;        
-        padding-top : 30px;        
+        height : auto;  
+        margin-left : 0;
+
+        padding-top : 30px; 
+        width : 100%;       
     }
 
     #troisParagraphesFooter {
